@@ -12,17 +12,14 @@ package Simple.Responsability.despues;
 public class Coche {
 String marca;
 
-    public String getMarcaCoche() {
+    public String getMarca() {
         return marca;
     }
 
     public Coche(String marca) {
         this.marca = marca;
     }
-    void guardarCocheDB(Coche coche)
-    {
-   //        
-    }
+
 
     
 }

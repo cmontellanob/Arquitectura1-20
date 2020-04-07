@@ -3,23 +3,26 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Simple.Responsability.despues;
+package singleton;
 
 /**
  *
  * @author Carlos
  */
-public class Solid {
+public class Singleton {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-          Coche coche=new Coche("Fiat");
-          CocheDB manejador=new CocheDB();
-          manejador.guardarCocheDB(coche);
-
+        SingleObject a=SingleObject.getInstance();
+        a.setMensage("Hola");
+        System.out.print(a.getMensage());
+        SingleObject b=SingleObject.getInstance();
+        b.setMensage("Buenas Tardes");
+        System.out.print(a.getMensage());
+        
     }
     
 }
