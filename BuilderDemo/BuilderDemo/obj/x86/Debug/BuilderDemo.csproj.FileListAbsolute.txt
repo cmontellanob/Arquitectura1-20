@@ -1,0 +1,6 @@
+D:\univalle\patrones-diseno\BuilderDemo\BuilderDemo\bin\Debug\BuilderDemo.exe
+D:\univalle\patrones-diseno\BuilderDemo\BuilderDemo\bin\Debug\BuilderDemo.pdb
+D:\univalle\patrones-diseno\BuilderDemo\BuilderDemo\obj\x86\Debug\BuilderDemo.csprojAssemblyReference.cache
+D:\univalle\patrones-diseno\BuilderDemo\BuilderDemo\obj\x86\Debug\BuilderDemo.csproj.CoreCompileInputs.cache
+D:\univalle\patrones-diseno\BuilderDemo\BuilderDemo\obj\x86\Debug\BuilderDemo.exe
+D:\univalle\patrones-diseno\BuilderDemo\BuilderDemo\obj\x86\Debug\BuilderDemo.pdb
