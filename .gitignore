@@ -45,3 +45,23 @@ hs_err_pid*
 /Builder/build/
 /Prototype/build/
 /Prototype/dist/
+/tema 2/Solid/build/
+/tema 2/Solid/nbproject/private/
+/tema 2/Solid1/build/
+/tema 2/Solid1/nbproject/private/
+/tema 2/Solid2/nbproject/private/
+/tema 2/Solid3/nbproject/private/
+/tema 3/creacionales/AbstractFactoryConexiones/build/
+/tema 3/creacionales/AbstractFactoryConexiones/nbproject/private/
+/tema 3/creacionales/Builder/build/
+/tema 3/creacionales/Builder/nbproject/private/
+/tema 3/creacionales/ClienteOperacionesJava/nbproject/private/
+/tema 3/creacionales/Factory/build/
+/tema 3/creacionales/Factory/nbproject/private/
+/tema 3/creacionales/FactoryProductos/build/
+/tema 3/creacionales/FactoryProductos/nbproject/private/
+/tema 3/creacionales/Prototype/build/
+/tema 3/creacionales/Prototype/nbproject/private/
+/tema 3/creacionales/Proxy/target/
+/tema 3/creacionales/Singleton/build/
+/tema 3/creacionales/Singleton/nbproject/private/
