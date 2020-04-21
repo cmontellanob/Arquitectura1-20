@@ -1,6 +1,4 @@
-package com.mitocode.inter;
-
-import com.mitocode.model.Cuenta;
+package Proxy;
 
 public interface ICuenta {
 

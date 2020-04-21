@@ -1,10 +1,8 @@
-package com.mitocode.proxy;
+package Proxy;
 
 import java.util.logging.Logger;
 
-import com.mitocode.inter.ICuenta;
-import com.mitocode.inter.impl.CuentaBancoAImpl;
-import com.mitocode.model.Cuenta;
+
 
 public class CuentaProxy implements ICuenta {
 

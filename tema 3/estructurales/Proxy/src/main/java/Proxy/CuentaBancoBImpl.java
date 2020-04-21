@@ -1,9 +1,7 @@
-package com.mitocode.inter.impl;
+package Proxy;
 
-import com.mitocode.inter.ICuenta;
-import com.mitocode.model.Cuenta;
 
-public class CuentaBancoAImpl implements ICuenta {
+public class CuentaBancoBImpl implements ICuenta {
 
 	@Override
 	public Cuenta retirarDinero(Cuenta cuenta, double monto) {
@@ -15,7 +13,7 @@ public class CuentaBancoAImpl implements ICuenta {
 
 	@Override
 	public Cuenta depositarDinero(Cuenta cuenta, double monto) {
-		double saldoActual = cuenta.getSaldoInicial() + monto;
+		double saldoActual = cuenta.getSaldoInicial() + monto + 0.20;
 		cuenta.setSaldoInicial(saldoActual);
 		System.out.println("Saldo actual: " + cuenta.getSaldoInicial());
 		return cuenta;

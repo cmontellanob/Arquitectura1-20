@@ -1,10 +1,4 @@
-package com.mitocode;
-
-import com.mitocode.inter.ICuenta;
-import com.mitocode.inter.impl.CuentaBancoBImpl;
-import com.mitocode.inter.impl.CuentaBancoAImpl;
-import com.mitocode.model.Cuenta;
-import com.mitocode.proxy.CuentaProxy;
+package Proxy;
 
 public class App {
 

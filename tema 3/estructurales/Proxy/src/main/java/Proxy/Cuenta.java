@@ -1,4 +1,4 @@
-package com.mitocode.model;
+package Proxy;
 
 public class Cuenta {
 
