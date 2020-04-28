@@ -3,25 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package decorator;
+package flyweightdesign;
 
 /**
  *
  * @author Carlos
  */
-public class Decorator {
+public class FlyweightDesign {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Cuenta c = new Cuenta(1, "Distribuidos");	
-		
-		ICuentaBancaria cuenta = new CuentaAhorro();
-		ICuentaBancaria cuentaBlindada = new BlindajeDecorador(cuenta);
-		
-		//cuenta.abrirCuenta(c);
-		cuentaBlindada.abrirCuenta(c);
+        // TODO code application logic here
     }
     
 }

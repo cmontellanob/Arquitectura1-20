@@ -2,7 +2,7 @@
 
 <ClassDiagram name="decorator">
   <ClassDiagramComponents>
-    <Class name="BlindajeDecorador" package="decorator" visibility="public" xPosition="982.0" yPosition="1095.0">
+    <Class name="BlindajeDecorador" package="decorator" visibility="public" xPosition="917.0" yPosition="784.0">
       <Fields/>
       <Constructors>
         <Constructor visibility="public">
@@ -18,7 +18,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="Cuenta" package="decorator" visibility="public" xPosition="1761.0" yPosition="977.0">
+    <Class name="Cuenta" package="decorator" visibility="public" xPosition="1742.0" yPosition="708.0">
       <Fields>
         <Field name="id" type="int" visibility="private"/>
         <Field name="cliente" type="String" visibility="private"/>
@@ -41,7 +41,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="CuentaAhorro" package="decorator" visibility="public" xPosition="1395.0" yPosition="458.0">
+    <Class name="CuentaAhorro" package="decorator" visibility="public" xPosition="1727.0" yPosition="481.0">
       <Fields/>
       <Constructors/>
       <Methods>
@@ -50,7 +50,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="CuentaCorriente" package="decorator" visibility="public" xPosition="1341.0" yPosition="951.0">
+    <Class name="CuentaCorriente" package="decorator" visibility="public" xPosition="1408.0" yPosition="595.0">
       <Fields/>
       <Constructors/>
       <Methods>
@@ -83,7 +83,7 @@
         </Method>
       </Methods>
     </Class>
-    <Interface name="ICuentaBancaria" package="decorator" visibility="public" xPosition="1728.0" yPosition="607.0">
+    <Interface name="ICuentaBancaria" package="decorator" visibility="public" xPosition="1379.0" yPosition="411.0">
       <Methods>
         <Method name="abrirCuenta" returnType="void" visibility="package">
           <Argument type="Cuenta" name="c"/>
@@ -92,15 +92,15 @@
     </Interface>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
-    <HasRelation name="cuentaDecorada" source="decorator.CuentaDecorador" target="decorator.ICuentaBancaria" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation source="decorator.CuentaCorriente" target="decorator.Cuenta" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="decorator.CuentaAhorro" target="decorator.ICuentaBancaria"/>
     <UseRelation source="decorator.ICuentaBancaria" target="decorator.Cuenta" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="decorator.CuentaDecorador" target="decorator.ICuentaBancaria"/>
-    <IsRelation name="is" source="decorator.BlindajeDecorador" target="decorator.CuentaDecorador"/>
     <UseRelation source="decorator.BlindajeDecorador" target="decorator.Cuenta" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation source="decorator.CuentaAhorro" target="decorator.Cuenta" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="decorator.CuentaDecorador" target="decorator.Cuenta" sourceCardinality="1..1" targetCardinality="1..1"/>
     <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="decorator.CuentaCorriente" target="decorator.ICuentaBancaria"/>
+    <HasRelation name="cuentaDecorada" source="decorator.CuentaDecorador" target="decorator.ICuentaBancaria" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="decorator.BlindajeDecorador" target="decorator.CuentaDecorador"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="decorator.CuentaAhorro" target="decorator.ICuentaBancaria"/>
+    <UseRelation source="decorator.CuentaDecorador" target="decorator.Cuenta" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="decorator.CuentaDecorador" target="decorator.ICuentaBancaria"/>
   </ClassDiagramRelations>
 </ClassDiagram>
