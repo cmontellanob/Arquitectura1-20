@@ -1,0 +1,5 @@
+com\mitocode\memento\Juego.class
+com\mitocode\App.class
+com\mitocode\memento\Caretaker.class
+com\mitocode\memento\Memento.class
+com\mitocode\memento\Originator.class
