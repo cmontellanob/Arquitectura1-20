@@ -16,12 +16,15 @@ public class ChainOfResponsability {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-           Manejador m1 = new ManejadorAprobado();
+        Manejador m1 = new ManejadorAprobado();
         Manejador m2 = new ManejadorDenegado();
         Manejador m3 = new ManejadorPendiente();
-         m1.setSiguiente( m2 );
-         m2.setSiguiente( m3 );
-         m1.comprobar("APROBADO");
+        m1.setSiguiente( m2 );
+        m2.setSiguiente( m3 );
+        
+        //* estas son las llamadas 
+        
+        m1.comprobar("APROBADO");
         m1.comprobar("APROBADO");
         m1.comprobar("DENEGADO");
         m1.comprobar(null);

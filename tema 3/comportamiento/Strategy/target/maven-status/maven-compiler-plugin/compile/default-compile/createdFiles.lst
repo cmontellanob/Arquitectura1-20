@@ -1,7 +1,0 @@
-com\mitocode\App.class
-com\mitocode\strategy\AnalisisAvanzado.class
-com\mitocode\strategy\AntivirusAvanzado.class
-com\mitocode\strategy\AntivirusSimple.class
-com\mitocode\strategy\AnalisisSimple.class
-com\mitocode\strategy\IEstrategia.class
-com\mitocode\strategy\Contexto.class

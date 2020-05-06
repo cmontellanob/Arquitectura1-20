@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Command">
+  <ClassDiagramComponents>
+    <Class name="Command" package="command" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Cuenta" package="command" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="saldo" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="id"/>
+          <Argument type="double" name="saldo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="retirar" returnType="void" visibility="public">
+          <Argument type="double" name="monto"/>
+        </Method>
+        <Method name="depositar" returnType="void" visibility="public">
+          <Argument type="double" name="monto"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DepositarImpl" package="command" visibility="public" xPosition="374.0" yPosition="241.0">
+      <Fields>
+        <Field name="cuenta" type="Cuenta" visibility="private"/>
+        <Field name="monto" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Cuenta" name="cuenta"/>
+          <Argument type="double" name="monto"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="execute" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Invoker" package="command" visibility="public" xPosition="949.0" yPosition="1.0">
+      <Fields>
+        <Field name="operaciones" type="List&lt;IOperacion&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="recibirOperacion" returnType="void" visibility="public">
+          <Argument type="IOperacion" name="operacion"/>
+        </Method>
+        <Method name="realizarOperaciones" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="RetirarImpl" package="command" visibility="public" xPosition="749.0" yPosition="241.0">
+      <Fields>
+        <Field name="cuenta" type="Cuenta" visibility="private"/>
+        <Field name="monto" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Cuenta" name="cuenta"/>
+          <Argument type="double" name="monto"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="execute" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="IOperacion" package="command" visibility="public" xPosition="672.0" yPosition="20.0">
+      <Methods>
+        <Method name="execute" returnType="void" visibility="package"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="cuenta" source="command.RetirarImpl" target="command.Cuenta" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="command.Invoker" target="command.IOperacion" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="operaciones" source="command.Invoker" target="command.IOperacion" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;IOperacion&gt;"/>
+    <HasRelation name="cuenta" source="command.DepositarImpl" target="command.Cuenta" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="command.DepositarImpl" target="command.IOperacion"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="command.RetirarImpl" target="command.IOperacion"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

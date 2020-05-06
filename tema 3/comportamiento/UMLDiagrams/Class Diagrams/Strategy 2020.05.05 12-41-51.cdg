@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Strategy">
+  <ClassDiagramComponents>
+    <Class name="AnalisisAvanzado" package="strategy" visibility="public" isAbstract="true" xPosition="403.0" yPosition="409.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="analizar" returnType="void" visibility="public"/>
+        <Method name="iniciar" returnType="void" visibility="package" isAbstract="true"/>
+        <Method name="analizarMemoria" returnType="void" visibility="package" isAbstract="true"/>
+        <Method name="analizarKeyloggers" returnType="void" visibility="package" isAbstract="true"/>
+        <Method name="analizarRootKits" returnType="void" visibility="package" isAbstract="true"/>
+        <Method name="descomprimirZip" returnType="void" visibility="package" isAbstract="true"/>
+        <Method name="detener" returnType="void" visibility="package" isAbstract="true"/>
+      </Methods>
+    </Class>
+    <Class name="AnalisisSimple" package="strategy" visibility="public" isAbstract="true" xPosition="704.0" yPosition="409.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="analizar" returnType="void" visibility="public"/>
+        <Method name="iniciar" returnType="void" visibility="package" isAbstract="true"/>
+        <Method name="saltarZip" returnType="void" visibility="package" isAbstract="true"/>
+        <Method name="detener" returnType="void" visibility="package" isAbstract="true"/>
+      </Methods>
+    </Class>
+    <Class name="AntivirusAvanzado" package="strategy" visibility="public" xPosition="95.0" yPosition="585.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="iniciar" returnType="void" visibility="package"/>
+        <Method name="analizarMemoria" returnType="void" visibility="package"/>
+        <Method name="analizarKeyloggers" returnType="void" visibility="package"/>
+        <Method name="analizarRootKits" returnType="void" visibility="package"/>
+        <Method name="descomprimirZip" returnType="void" visibility="package"/>
+        <Method name="detener" returnType="void" visibility="package"/>
+      </Methods>
+    </Class>
+    <Class name="AntivirusSimple" package="strategy" visibility="public" xPosition="1081.0" yPosition="611.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="iniciar" returnType="void" visibility="package"/>
+        <Method name="saltarZip" returnType="void" visibility="package"/>
+        <Method name="detener" returnType="void" visibility="package"/>
+      </Methods>
+    </Class>
+    <Class name="Contexto" package="strategy" visibility="public" xPosition="-3.0" yPosition="322.0">
+      <Fields>
+        <Field name="estrategia" type="IEstrategia" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="IEstrategia" name="estrategia"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="ejecutar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Strategy" package="strategy" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="IEstrategia" package="strategy" visibility="public" xPosition="546.0" yPosition="201.0">
+      <Methods>
+        <Method name="analizar" returnType="void" visibility="package"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="strategy.AntivirusAvanzado" target="strategy.AnalisisAvanzado"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="strategy.AnalisisSimple" target="strategy.IEstrategia"/>
+    <HasRelation name="estrategia" source="strategy.Contexto" target="strategy.IEstrategia" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="strategy.AntivirusSimple" target="strategy.AnalisisSimple"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="strategy.AnalisisAvanzado" target="strategy.IEstrategia"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
