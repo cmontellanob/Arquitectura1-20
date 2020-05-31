@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Mediator">
+  <ClassDiagramComponents>
+    <Class name="Colega" package="mediator" visibility="public" isAbstract="true" xPosition="553.0" yPosition="59.0">
+      <Fields>
+        <Field name="mediador" type="IMediador" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getMediador" returnType="IMediador" visibility="public"/>
+        <Method name="setMediador" returnType="void" visibility="public">
+          <Argument type="IMediador" name="m"/>
+        </Method>
+        <Method name="comunicar" returnType="void" visibility="public">
+          <Argument type="String" name="mensaje"/>
+        </Method>
+        <Method name="recibir" returnType="void" visibility="public" isAbstract="true">
+          <Argument type="String" name="mensaje"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ColegaConcreto1" package="mediator" visibility="public" xPosition="356.0" yPosition="293.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="IMediador" name="m"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="recibir" returnType="void" visibility="public">
+          <Argument type="String" name="mensaje"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ColegaConcreto2" package="mediator" visibility="public" xPosition="596.0" yPosition="279.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="IMediador" name="m"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="recibir" returnType="void" visibility="public">
+          <Argument type="String" name="mensaje"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ColegaConcreto3" package="mediator" visibility="public" xPosition="844.0" yPosition="293.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="IMediador" name="m"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="recibir" returnType="void" visibility="public">
+          <Argument type="String" name="mensaje"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Mediador" package="mediator" visibility="public" xPosition="27.0" yPosition="163.0">
+      <Fields>
+        <Field name="colegas" type="ArrayList&lt;Colega&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="agregarColega" returnType="void" visibility="public">
+          <Argument type="Colega" name="colega"/>
+        </Method>
+        <Method name="enviar" returnType="void" visibility="public">
+          <Argument type="String" name="mensaje"/>
+          <Argument type="Colega" name="originator"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Mediator" package="mediator" visibility="public" xPosition="73.0" yPosition="400.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="IMediador" package="mediator" visibility="public" xPosition="51.0" yPosition="31.0">
+      <Methods>
+        <Method name="enviar" returnType="void" visibility="public">
+          <Argument type="String" name="mensaje"/>
+          <Argument type="Colega" name="emisor"/>
+        </Method>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="mediator.Mediador" target="mediator.Colega" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="mediator.ColegaConcreto1" target="mediator.Colega"/>
+    <UseRelation source="mediator.Colega" target="mediator.Mediador" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="mediator.ColegaConcreto3" target="mediator.Colega"/>
+    <HasRelation name="mediador" source="mediator.Colega" target="mediator.IMediador" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="mediator.Mediador" target="mediator.IMediador"/>
+    <UseRelation source="mediator.IMediador" target="mediator.Colega" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="colegas" source="mediator.Mediador" target="mediator.Colega" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Colega&gt;"/>
+    <IsRelation name="is" source="mediator.ColegaConcreto2" target="mediator.Colega"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

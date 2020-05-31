@@ -21,3 +21,12 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+/tema 3/comportamiento/Mediator/nbproject/private/
+/tema 3/comportamiento/Mediator/build/
+/tema 3/comportamiento/TemplateMethod/nbproject/private/
+/tema 3/comportamiento/Visitor/nbproject/private/
+/tema 3/comportamiento/State/nbproject/private/
+/tema 3/comportamiento/State/build/
+/tema 3/comportamiento/TemplateMethod/build/
+/tema 3/comportamiento/Visitor/build/
+/clases/relacion Has/nbproject/private/

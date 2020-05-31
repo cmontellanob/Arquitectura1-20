@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Visitor">
+  <ClassDiagramComponents>
+    <Class name="EquiparArma" package="visitor" visibility="public" xPosition="189.0" yPosition="216.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="visit" returnType="void" visibility="public">
+          <Argument type="Mago" name="m"/>
+        </Method>
+        <Method name="visit" returnType="void" visibility="public">
+          <Argument type="Guerrero" name="g"/>
+        </Method>
+        <Method name="visit" returnType="void" visibility="public">
+          <Argument type="List&lt;IPersonaje&gt;" name="personajes"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Guerrero" package="visitor" visibility="public" xPosition="157.0" yPosition="522.0">
+      <Fields>
+        <Field name="arma" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getArma" returnType="String" visibility="public"/>
+        <Method name="setArma" returnType="void" visibility="public">
+          <Argument type="String" name="arma"/>
+        </Method>
+        <Method name="accept" returnType="void" visibility="public">
+          <Argument type="IVisitor" name="visitor"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Mago" package="visitor" visibility="public" xPosition="884.0" yPosition="412.0">
+      <Fields>
+        <Field name="arma" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getArma" returnType="String" visibility="public"/>
+        <Method name="setArma" returnType="void" visibility="public">
+          <Argument type="String" name="arma"/>
+        </Method>
+        <Method name="accept" returnType="void" visibility="public">
+          <Argument type="IVisitor" name="visitor"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Visitor" package="visitor" visibility="public" xPosition="620.0" yPosition="632.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="IPersonaje" package="visitor" visibility="public" xPosition="620.0" yPosition="275.0">
+      <Methods>
+        <Method name="accept" returnType="void" visibility="public">
+          <Argument type="IVisitor" name="visitor"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="IVisitor" package="visitor" visibility="public" xPosition="948.0" yPosition="227.0">
+      <Methods>
+        <Method name="visit" returnType="void" visibility="public">
+          <Argument type="Mago" name="m"/>
+        </Method>
+        <Method name="visit" returnType="void" visibility="public">
+          <Argument type="Guerrero" name="g"/>
+        </Method>
+        <Method name="visit" returnType="void" visibility="public">
+          <Argument type="List&lt;IPersonaje&gt;" name="elementList"/>
+        </Method>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="visitor.EquiparArma" target="visitor.Mago" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="visitor.IVisitor" target="visitor.Mago" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="visitor.EquiparArma" target="visitor.Guerrero" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="visitor.Guerrero" target="visitor.Visitor" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="visitor.Mago" target="visitor.IPersonaje"/>
+    <UseRelation source="visitor.IVisitor" target="visitor.Guerrero" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="visitor.IVisitor" target="visitor.IPersonaje" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="visitor.Mago" target="visitor.Visitor" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="visitor.IPersonaje" target="visitor.Visitor" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="visitor.EquiparArma" target="visitor.IPersonaje" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="visitor.EquiparArma" target="visitor.IVisitor"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="visitor.Guerrero" target="visitor.IPersonaje"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
