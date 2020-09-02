@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="state">
+  <ClassDiagramComponents>
+    <Class name="EstadoAmarillo" package="state" visibility="public" xPosition="344.0" yPosition="238.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="mostrar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="EstadoRojo" package="state" visibility="public" xPosition="581.0" yPosition="238.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="mostrar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="EstadoVerde" package="state" visibility="public" xPosition="845.0" yPosition="217.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="mostrar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Semaforo" package="state" visibility="public" xPosition="1052.0" yPosition="20.0">
+      <Fields>
+        <Field name="estado" type="IEstadoSemaforo" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="IEstadoSemaforo" name="estado"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setEstado" returnType="void" visibility="public">
+          <Argument type="IEstadoSemaforo" name="estado"/>
+        </Method>
+        <Method name="mostrar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="State" package="state" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="IEstadoSemaforo" package="state" visibility="public" xPosition="622.0" yPosition="31.0">
+      <Methods>
+        <Method name="mostrar" returnType="void" visibility="package"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="state.EstadoAmarillo" target="state.IEstadoSemaforo"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="state.EstadoVerde" target="state.IEstadoSemaforo"/>
+    <HasRelation name="estado" source="state.Semaforo" target="state.IEstadoSemaforo" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="state.EstadoRojo" target="state.IEstadoSemaforo"/>
+    <UseRelation source="state.Semaforo" target="state.Semaforo" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

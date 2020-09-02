@@ -1,8 +1,8 @@
-package abstractfactoryconexiones;
+package zoologico3;
 
 public interface IFabricaAbstracta {
 
-	IConexionBD getBD(String motor);
-	IConexionREST getREST(String area);
-	
+	IMamiferos getMamifero(String mamifero);
+	IAves getAve(String ave);
+        IPeces getPez (String pez);
 }

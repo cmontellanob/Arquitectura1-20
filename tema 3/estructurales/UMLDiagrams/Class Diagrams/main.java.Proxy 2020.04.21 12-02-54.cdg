@@ -97,7 +97,7 @@
         </Method>
       </Methods>
     </Class>
-    <Interface name="ICuenta" package="Proxy" visibility="public" xPosition="512.0" yPosition="446.0">
+    <Interface name="ICuenta" package="Proxy" visibility="public" xPosition="427.0" yPosition="314.0">
       <Methods>
         <Method name="retirarDinero" returnType="Cuenta" visibility="package">
           <Argument type="Cuenta" name="cuenta"/>
@@ -114,13 +114,13 @@
     </Interface>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
-    <UseRelation source="Proxy.CuentaBancoAImpl" target="Proxy.Cuenta" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="Proxy.CuentaBancoBImpl" target="Proxy.Cuenta" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="Proxy.ICuenta" target="Proxy.Cuenta" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Proxy.CuentaProxy" target="Proxy.ICuenta"/>
-    <HasRelation name="cuentaReal" source="Proxy.CuentaProxy" target="Proxy.ICuenta" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Proxy.CuentaBancoAImpl" target="Proxy.ICuenta"/>
     <UseRelation source="Proxy.CuentaProxy" target="Proxy.Cuenta" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Proxy.ICuenta" target="Proxy.Cuenta" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Proxy.CuentaBancoAImpl" target="Proxy.Cuenta" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Proxy.CuentaBancoAImpl" target="Proxy.ICuenta"/>
+    <UseRelation source="Proxy.CuentaBancoBImpl" target="Proxy.Cuenta" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Proxy.CuentaProxy" target="Proxy.ICuenta"/>
     <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Proxy.CuentaBancoBImpl" target="Proxy.ICuenta"/>
+    <HasRelation name="cuentaReal" source="Proxy.CuentaProxy" target="Proxy.ICuenta" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
   </ClassDiagramRelations>
 </ClassDiagram>

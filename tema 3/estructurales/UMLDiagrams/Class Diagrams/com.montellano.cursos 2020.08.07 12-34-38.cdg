@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="com.montellano.cursos">
+  <ClassDiagramComponents>
+    <Class name="CursoProgramacion" package="com.montellano.cursos" visibility="public" xPosition="399.0" yPosition="271.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="package"/>
+        <Field name="duracion" type="String" visibility="package"/>
+        <Field name="profesor" type="Profesor" visibility="package"/>
+        <Field name="gestion" type="int" visibility="package"/>
+        <Field name="temas" type="Tema[]" visibility="package"/>
+        <Field name="estudiantes" type="Estudiante[]" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="duracion"/>
+          <Argument type="Profesor" name="profesor"/>
+          <Argument type="int" name="gestion"/>
+          <Argument type="short" name="nroTemas"/>
+          <Argument type="short" name="nroEstudiantes"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getDuracion" returnType="String" visibility="public"/>
+        <Method name="setDuracion" returnType="void" visibility="public">
+          <Argument type="String" name="duracion"/>
+        </Method>
+        <Method name="getProfesor" returnType="Profesor" visibility="public"/>
+        <Method name="setProfesor" returnType="void" visibility="public">
+          <Argument type="Profesor" name="profesor"/>
+        </Method>
+        <Method name="getGestion" returnType="int" visibility="public"/>
+        <Method name="setGestion" returnType="void" visibility="public">
+          <Argument type="int" name="gestion"/>
+        </Method>
+        <Method name="addEstudiante" returnType="void" visibility="public">
+          <Argument type="short" name="indice"/>
+          <Argument type="Estudiante" name="estudiante"/>
+        </Method>
+        <Method name="addTema" returnType="void" visibility="public">
+          <Argument type="short" name="indice"/>
+          <Argument type="Tema" name="tema"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Estudiante" package="com.montellano.cursos" visibility="public" xPosition="1093.0" yPosition="458.0">
+      <Fields>
+        <Field name="idCard" type="String" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombres"/>
+          <Argument type="String" name="apellidos"/>
+          <Argument type="String" name="sexo"/>
+          <Argument type="short" name="edad"/>
+          <Argument type="String" name="idCard"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getIdCard" returnType="String" visibility="public"/>
+        <Method name="setIdCard" returnType="void" visibility="public">
+          <Argument type="String" name="idCard"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Persona" package="com.montellano.cursos" visibility="public" xPosition="964.0" yPosition="92.0">
+      <Fields>
+        <Field name="nombres" type="String" visibility="private"/>
+        <Field name="apellidos" type="String" visibility="private"/>
+        <Field name="sexo" type="String" visibility="private"/>
+        <Field name="edad" type="short" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombres"/>
+          <Argument type="String" name="apellidos"/>
+          <Argument type="String" name="sexo"/>
+          <Argument type="short" name="edad"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombres" returnType="String" visibility="public"/>
+        <Method name="setNombres" returnType="void" visibility="public">
+          <Argument type="String" name="nombres"/>
+        </Method>
+        <Method name="getApellidos" returnType="String" visibility="public"/>
+        <Method name="setApellidos" returnType="void" visibility="public">
+          <Argument type="String" name="apellidos"/>
+        </Method>
+        <Method name="getEdad" returnType="short" visibility="public"/>
+        <Method name="setEdad" returnType="void" visibility="public">
+          <Argument type="short" name="edad"/>
+        </Method>
+        <Method name="getSexo" returnType="String" visibility="public"/>
+        <Method name="setSexo" returnType="void" visibility="public">
+          <Argument type="String" name="sexo"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Profesor" package="com.montellano.cursos" visibility="public" xPosition="883.0" yPosition="458.0">
+      <Fields>
+        <Field name="DNI" type="String" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombres"/>
+          <Argument type="String" name="apellidos"/>
+          <Argument type="String" name="sexo"/>
+          <Argument type="short" name="edad"/>
+          <Argument type="String" name="DNI"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDNI" returnType="String" visibility="public"/>
+        <Method name="setDNI" returnType="void" visibility="public">
+          <Argument type="String" name="dNI"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Tema" package="com.montellano.cursos" visibility="public" xPosition="481.0" yPosition="703.0">
+      <Fields>
+        <Field name="titulo" type="String" visibility="package"/>
+        <Field name="descripcion" type="String" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="titulo"/>
+          <Argument type="String" name="descripcion"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getTitulo" returnType="String" visibility="public"/>
+        <Method name="setTitulo" returnType="void" visibility="public">
+          <Argument type="String" name="titulo"/>
+        </Method>
+        <Method name="getDescripcion" returnType="String" visibility="public"/>
+        <Method name="setDescripcion" returnType="void" visibility="public">
+          <Argument type="String" name="descripcion"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="ICurso" package="com.montellano.cursos" visibility="public" xPosition="465.0" yPosition="92.0">
+      <Methods>
+        <Method name="addEstudiante" returnType="void" visibility="public">
+          <Argument type="short" name="indice"/>
+          <Argument type="Estudiante" name="estudiante"/>
+        </Method>
+        <Method name="addTema" returnType="void" visibility="public">
+          <Argument type="short" name="indice"/>
+          <Argument type="Tema" name="tema"/>
+        </Method>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="com.montellano.cursos.CursoProgramacion" target="com.montellano.cursos.Tema" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="profesor" source="com.montellano.cursos.CursoProgramacion" target="com.montellano.cursos.Profesor" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.montellano.cursos.ICurso" target="com.montellano.cursos.Tema" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="com.montellano.cursos.Estudiante" target="com.montellano.cursos.Persona"/>
+    <UseRelation source="com.montellano.cursos.CursoProgramacion" target="com.montellano.cursos.Estudiante" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.montellano.cursos.ICurso" target="com.montellano.cursos.Estudiante" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="com.montellano.cursos.Profesor" target="com.montellano.cursos.Persona"/>
+    <UseRelation source="com.montellano.cursos.CursoProgramacion" target="com.montellano.cursos.Profesor" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.montellano.cursos.CursoProgramacion" target="com.montellano.cursos.ICurso"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
